@@ -1,0 +1,9 @@
+The file value_weight_44.pdf has no matching fig.write_image(...) line in the
+AHP_analyse repository (search across all .ipynb and .py files).
+
+Possible explanations:
+- manual export from an interactive figure;
+- another machine / unversioned branch;
+- name derived from respondent count (e.g. 44) or a survey file.
+
+If you find the source script, add it to this bundle (e.g. scripts/value_weight_bar.py).
