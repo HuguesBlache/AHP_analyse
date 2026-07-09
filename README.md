@@ -10,6 +10,8 @@ This folder collects **runnable code**, the **AHP modules** used from `analyse_a
 | `src/function_ahp_*_2.py` | Same files as in the parent repo (loaded with `%run` in the notebook). |
 | `generate_mixture_figures.py` | Writes `B-AHP_*`, `C-AHP_*`, `W-AHP_*` as `_mixture.pdf` and `_word.pdf` (see `analyse_ahp.ipynb`, cells ~8, 13, 15). |
 | `expert_plots_google_sheet.py` | Writes `expert_count.pdf` and `expert_scenario.pdf` (from `notebooks/AHP_analyse_google_sheet.ipynb`). |
+| `sensitivity_expertise_weights.py` | Sensitivity analysis of expertise weights $\alpha_k$ for W-AHP and B-AHP (JICV revision). |
+| `sensitivity_expertise_weights_results.csv` | Output: Spearman $\rho$ and top/bottom-10 overlap across five $\alpha_k$ schemes. |
 | `notebooks/AHP_analyse_google_sheet.ipynb` | Copy of the original notebook. |
 | `output/images/` | PDF output (created when you run the scripts). |
 
@@ -30,6 +32,17 @@ python expert_plots_google_sheet.py --skip-show
 ```
 
 Mixture and word PDFs go to `output/images/` (override with `--out`).
+
+## Sensitivity analysis of expertise weights ($\alpha_k$)
+
+Reproduces the robustness check requested by JICV reviewers for Table 2 weights `{0.1, 0.3, 0.5, 0.7, 1.0}`.
+
+```bash
+python sensitivity_expertise_weights.py
+python sensitivity_expertise_weights.py --survey data/survey_42.csv
+```
+
+Writes `sensitivity_expertise_weights_results.csv` with Spearman rank correlations and top-10/bottom-10 scenario overlap for five schemes (baseline manuscript, baseline code, uniform, steeper, mild) on W-AHP and B-AHP.
 
 ## `value_weight_44.pdf`
 
