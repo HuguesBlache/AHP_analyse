@@ -1,5 +1,10 @@
 __pycache__/
 *.pyc
 .DS_Store
+.ipynb_checkpoints/
+.venv/
+venv/
 output/images/*.pdf
 output/images/*.png
+!output/images/.gitkeep
+!output/results/.gitkeep

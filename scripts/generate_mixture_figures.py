@@ -6,9 +6,9 @@ W-AHP_mixture.pdf, W-AHP_word.pdf using the same logic as analyse_ahp.ipynb
 
 Dependencies: pandas, numpy, scikit-learn, plotly, kaleido (for fig.write_image).
 
-Usage (from this directory):
-  python generate_mixture_figures.py
-  python generate_mixture_figures.py --survey data/survey_42.csv
+Usage (from repository root):
+  python scripts/generate_mixture_figures.py
+  python scripts/generate_mixture_figures.py --survey data/survey_42.csv
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.mixture import GaussianMixture
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
 DATA = ROOT / "data"
 OUTPUT = ROOT / "output"
@@ -220,7 +220,7 @@ def main() -> None:
         "--survey",
         type=Path,
         default=DATA / "survey_42.csv",
-        help="Survey CSV (absolute path or path relative to figure_bundle_github/).",
+        help="Survey CSV (absolute path or path relative to repository root).",
     )
     parser.add_argument(
         "--out",

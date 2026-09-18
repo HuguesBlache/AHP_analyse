@@ -4,9 +4,9 @@ Taken from AHP_analyse_google_sheet.ipynb: expert_count and expert_scenario char
 
 Dependencies: pandas, plotly, kaleido.
 
-Usage:
-  python expert_plots_google_sheet.py
-  python expert_plots_google_sheet.py --survey data/survey_42.csv
+Usage (from repository root):
+  python scripts/expert_plots_google_sheet.py
+  python scripts/expert_plots_google_sheet.py --survey data/survey_42.csv
 """
 
 from __future__ import annotations
@@ -18,7 +18,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 IMG = ROOT / "output" / "images"
 

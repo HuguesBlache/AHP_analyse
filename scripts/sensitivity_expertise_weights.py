@@ -5,9 +5,9 @@ Sensitivity analysis for expertise weights alpha_k used in W-AHP and B-AHP.
 Compares alternative alpha schemes on scenario confidence scores and reports
 Spearman rank correlations and top/bottom scenario overlap vs. baseline.
 
-Usage:
-  python sensitivity_expertise_weights.py
-  python sensitivity_expertise_weights.py --survey path/to/survey_42.csv
+Usage (from repository root):
+  python scripts/sensitivity_expertise_weights.py
+  python scripts/sensitivity_expertise_weights.py --survey data/survey_42.csv
 """
 
 from __future__ import annotations
@@ -20,10 +20,8 @@ import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
 
-ROOT = Path(__file__).resolve().parent
-DEFAULT_SURVEY = (
-    ROOT / "figure_bundle_github" / "AHP_analyse" / "data" / "survey_42.csv"
-)
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_SURVEY = ROOT / "data" / "survey_42.csv"
 
 ALPHA_PATTERN = re.compile(
     r"alpha=\{'No expertise':[0-9.]+,'Beginner Level':[0-9.]+,"
@@ -107,18 +105,19 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "sensitivity_expertise_weights_results.csv",
+        default=ROOT / "output" / "results" / "sensitivity_expertise_weights_results.csv",
     )
     args = parser.parse_args()
+    args.output.parent.mkdir(parents=True, exist_ok=True)
 
     survey = str(args.survey)
     methods = {
         "W-AHP": (
-            ROOT / "function_ahp_geometric_2.py",
+            ROOT / "src" / "function_ahp_geometric_2.py",
             "ahp_weight",
         ),
         "B-AHP": (
-            ROOT / "function_ahp_belief_2.py",
+            ROOT / "src" / "function_ahp_belief_2.py",
             "ahp_belief",
         ),
     }
