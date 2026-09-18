@@ -160,12 +160,6 @@ Additional guidance is provided in `README.md`.
 
 ---
 
-## Funding information
-
-*[Fill before upload if applicable — funding organisation name(s) and grant number(s).]*
-
----
-
 ## Research facility
 
 University of New South Wales (UNSW), Research Centre for Integrated Transport Innovation (rCITI), Sydney, Australia  
