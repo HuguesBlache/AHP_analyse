@@ -20,7 +20,6 @@ This package contains the **data**, **source code**, and **scripts** needed to r
 ```text
 AHP_analyse/
 ├── README.md                          # this file
-├── REPLICATION_EXPLANATORY_FILE.md    # journal explanatory note
 ├── LICENSE                            # MIT
 ├── requirements.txt
 ├── data/
