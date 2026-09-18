@@ -14,19 +14,17 @@ Expert-weighted AHP replication package for simulation confidence
 
 ## Author(s)
 
-| Name | Role | Affiliation | Email |
-|------|------|-------------|-------|
-| Hugues Blache | Corresponding author | University of New South Wales (UNSW), Research Centre for Integrated Transport Innovation (rCITI), Sydney, Australia | *[fill before upload]* |
-| Pierre-Antoine Laharotte | Co-author | Université Gustave Eiffel / ENTPE, LICIT-ECO7, France | *[optional]* |
-| Nour-Eddin El Faouzi | Co-author | Université Gustave Eiffel / ENTPE, LICIT-ECO7, France | *[optional]* |
-
-Please replace email placeholders with institutional addresses before ETS-Data submission.
+| Name | Role | Affiliation |
+|------|------|-------------|
+| Hugues Blache | Corresponding author | University of New South Wales (UNSW), Research Centre for Integrated Transport Innovation (rCITI), Sydney, Australia |
+| Pierre-Antoine Laharotte | Co-author | Université Gustave Eiffel / ENTPE, Emob-Lab, France |
+| Nour-Eddin El Faouzi | Co-author | Université Gustave Eiffel / ENTPE, Emob-Lab, France |
 
 ---
 
 ## Keyword(s)
 
-Analytic Hierarchy Process; simulation confidence; microscopic traffic simulation; expert survey; belief theory; Dempster–Shafer; connected and automated vehicles; scenario-based testing; replication package
+Scenario-based testing; Analytic Hierarchy Process; simulation confidence; microscopic traffic simulation; expert survey; belief theory
 
 ---
 
@@ -171,7 +169,7 @@ Additional guidance is provided in `README.md`.
 ## Research facility
 
 University of New South Wales (UNSW), Research Centre for Integrated Transport Innovation (rCITI), Sydney, Australia  
-*(Co-author affiliations: Université Gustave Eiffel / ENTPE, LICIT-ECO7, France)*
+*(Co-author affiliations: Université Gustave Eiffel / ENTPE, Emob-Lab, France)*
 
 ---
 
@@ -206,6 +204,5 @@ Expert judgments are aggregated with three AHP strategies (classical, expertise-
 - [x] No PHI / sensitive personal data  
 - [x] Data + code + scripts + this Replication Explanatory File  
 - [ ] Packaged as a **single ZIP** (max 3 GB) for ETS-Data upload  
-- [ ] Author emails filled in the Author(s) table above  
 
 Suggested ZIP name: `JICV-2026-0031_AHP_analyse_replication.zip`

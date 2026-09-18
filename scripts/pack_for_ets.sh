@@ -18,4 +18,3 @@ zip -r "$OUT_DIR/$ZIP_NAME" . \
   -x "./output/images/*.png"
 echo "Created: $OUT_DIR/$ZIP_NAME"
 ls -lh "$OUT_DIR/$ZIP_NAME"
-echo "Remember to fill author emails in REPLICATION_EXPLANATORY_FILE.md before upload."
